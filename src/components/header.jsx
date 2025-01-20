@@ -11,18 +11,18 @@ const Header = () => {
             <h1 className="text-l font-bold">Lithia Project</h1>
           </div>
           <nav className="lg:flex justify-end space-x-3">
-            <Button as="a" href="#home">
-              Home
-            </Button>
-            <Button as="a" href="#about">
-              About
-            </Button>
-            <Button as="a" href="#portfolio">
-              Portfolio
-            </Button>
-            <Button as="a" href="#contact">
-              Contact
-            </Button>
+            <a href="#home">
+              <Button as="a">Home</Button>
+            </a>
+            <a href="#about">
+              <Button as="a">About</Button>
+            </a>
+            <a href="#portfolio">
+              <Button as="a">Portfolio</Button>
+            </a>
+            <a href="#contact">
+              <Button as="a">Contact</Button>
+            </a>
           </nav>
         </div>
       </div>
