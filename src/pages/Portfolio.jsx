@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPhp, FaJava, FaReact, FaPython, FaDatabase } from "react-icons/fa";
+import { FaPhp, FaJava, FaReact, FaPython, FaDatabase, FaGithub } from "react-icons/fa";
 import {
   SiJavascript,
   SiDjango,
@@ -10,11 +10,12 @@ import {
   SiBootstrap,
   SiDart,
 } from "react-icons/si";
+import { TfiWorld } from "react-icons/tfi";
 
 const projects = [
   {
     title: "Polinema Esports Website",
-    description: "A cool project using React",
+    description: "Polinema Esports website is a website for providing real-time updates on tournaments, events, and announcements.",
     techStack: [
       { name: "PHP", icon: <FaPhp className="text-purple-600" /> },
       { name: "Laravel", icon: <SiLaravel className="text-red-500" /> },
@@ -24,13 +25,13 @@ const projects = [
     ],
     image: "/polinema_esports.png",
     links: [
-      { label: "Visit Website", url: "https://www.polinemaesports.id" },
-      { label: "GitHub Repo", url: "https://github.com/polinema-esports" },
+      { label: "Visit Website", url: "https://www.polinemaesports.id", icon:<TfiWorld className="text-gray-800" /> },
+      { label: "Client Source", url: "https://github.com/radeonaru/polinemaesports", icon:<FaGithub className="text-gray-800" /> },
     ],
   },
   {
     title: "SIRW",
-    description: "Portfolio site with Tailwind",
+    description: "SIRW is a solution-based platform to facilitate services, management, and transparency within the Rukun Warga environment.",
     techStack: [
       { name: "PHP", icon: <FaPhp className="text-purple-600" /> },
       { name: "Laravel", icon: <SiLaravel className="text-red-500" /> },
@@ -40,12 +41,12 @@ const projects = [
     ],
     image: "/SIRW.png",
     links: [
-      { label: "Preview", url: "https://sirw-preview.com" },
+      { label: "Client Source", url: "https://github.com/radeonaru/SI2X", icon:<FaGithub className="text-gray-800" /> },
     ],
   },
   {
     title: "TertibApp",
-    description: "Portfolio site with Tailwind",
+    description: "TertibApp is a platform for reporting violations of rules and regulations on campus, especially in the Information Technology Department, Malang State Polytechnic.",
     techStack: [
       { name: "PHP", icon: <FaPhp className="text-purple-600" /> },
       { name: "Bootstrap", icon: <SiBootstrap className="text-purple-600" /> },
@@ -54,12 +55,12 @@ const projects = [
     ],
     image: "/TertibApp.png",
     links: [
-      { label: "Preview", url: "https://sirw-preview.com" },
+      { label: "Client Source", url: "https://github.com/radeonaru/TertibApp", icon:<FaGithub className="text-gray-800" /> },
     ],
   },
   {
     title: "Age Play",
-    description: "Portfolio site with Tailwind",
+    description: "AgePlay is a face recognition mobile app that can detect age and gender. This app is able to provide personalized game recommendations according to the user's detection results. AgePlay was developed as a Convolutional Neural Network (CNN)-based application that is able to provide real-time game recommendations, support easier search, and provide a safe and relevant gaming experience for all groups, including children.",
     techStack: [
     { name: "Python", icon: <FaPython className="text-blue-500" /> },
     { name: "Dart", icon: <SiDart className="text-blue-400" /> },
@@ -69,7 +70,7 @@ const projects = [
     ],
     image: "/age_play.png",
     links: [
-      { label: "Preview", url: "https://sirw-preview.com" },
+      { label: "Client Source", url: "https://github.com/radeonaru/AgePlay", icon:<FaGithub className="text-gray-800" /> },
     ],
   },
 ];
@@ -105,7 +106,7 @@ export default function Portfolio() {
                     {project.techStack.map((tech, idx) => (
                       <button
                         key={idx}
-                        className="flex items-center gap-2 bg-gray-200 px-3 py-2 rounded-lg shadow-sm hover:bg-gray-300"
+                        className="flex items-center gap-2 bg-gray-200 px-3 py-2 rounded-lg shadow-sm hover:bg-gray-800 hover:text-white hover:scale-105 transform transition-transform duration-500"
                       >
                         {tech.icon}
                         <span>{tech.name}</span>
@@ -123,9 +124,10 @@ export default function Portfolio() {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+                      className="flex items-center gap-2 bg-gray-200 px-3 py-2 rounded-lg shadow-sm hover:bg-gray-800 hover:text-white hover:scale-105 transform transition-transform duration-500"
                     >
-                      {link.label}
+                      {link.icon}
+                      <span>{link.label}</span>
                     </a>
                   ))}
                 </div>
