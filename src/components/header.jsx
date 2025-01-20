@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 
+
 const Header = () => {
   return (
     <header className="bg-white shadow fixed w-full top-0 z-50">
@@ -10,18 +11,18 @@ const Header = () => {
             <img src="/lithiaproject.png" alt="Lithia Project" width="60" height="60" />
             <h1 className="text-l font-bold">Lithia Project</h1>
           </div>
-          <nav className="lg:flex justify-end space-x-3">
+          <nav className="hidden lg:flex justify-end space-x-3">
             <a href="#home">
-              <Button as="a">Home</Button>
+              <Button className="rounded-lg hover:bg-gray-700 hover:text-white" as="a">Home</Button>
             </a>
             <a href="#about">
-              <Button as="a">About</Button>
+              <Button className="rounded-lg hover:bg-gray-700 hover:text-white" as="a">About</Button>
             </a>
             <a href="#portfolio">
-              <Button as="a">Portfolio</Button>
+              <Button className="rounded-lg hover:bg-gray-700 hover:text-white" as="a">Projects</Button>
             </a>
             <a href="#contact">
-              <Button as="a">Contact</Button>
+              <Button className="rounded-lg hover:bg-gray-700 hover:text-white" as="a">Contact</Button>
             </a>
           </nav>
         </div>
