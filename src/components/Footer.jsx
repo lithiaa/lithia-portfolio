@@ -22,7 +22,7 @@ export default function Footer() {
             <FaGithub className="h-6 w-6" aria-label="GitHub" />
           </a>
           <a
-            href="https://www.linkedin.com/in/radeonaru/"
+            href="https://www.linkedin.com/in/mbagusi/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-100 hover:text-gray-400 transition-colors duration-200"
@@ -30,7 +30,7 @@ export default function Footer() {
             <FaLinkedin className="h-6 w-6" aria-label="LinkedIn" />
           </a>
           <a
-            href="mailto:indraw910@gmail.com?subject=Hello%20Indra!"
+            href="mailto:indraw910@gmail.com?subject="
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-100 hover:text-gray-400 transition-colors duration-200"
