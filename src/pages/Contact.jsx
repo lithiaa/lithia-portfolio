@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaRegFilePdf } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -36,15 +36,16 @@ const Contact = () => {
       </div>
 
       {/* Download CV Button */}
-      <div>
-        <a
-          href="/CV_Eng_Muhammad Bagus Indrawan.pdf"
-          download
-          className="inline-block bg-gray-800 text-white px-6 py-3 rounded-lg shadow hover:bg-gray-700 transition duration-300"
-        >
-          Download CV
-        </a>
-      </div>
+        <div>
+          <a
+            href="/CV_Eng_Muhammad Bagus Indrawan.pdf"
+            download
+            className="inline-block bg-gray-800 text-white px-6 py-3 rounded-lg shadow hover:bg-gray-700 transition duration-300"
+          >
+            <FaRegFilePdf className="inline-block mr-2 mb-1" />
+            Download CV
+          </a>
+        </div>
     </section>
   );
 };
