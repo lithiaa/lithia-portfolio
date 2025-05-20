@@ -14,7 +14,7 @@ export default function Footer() {
         </p>
         <div className="flex space-x-4">
           <a
-            href="https://github.com/radeonaru"
+            href="https://github.com/lithiaa"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-100 hover:text-gray-400 transition-colors duration-200"
