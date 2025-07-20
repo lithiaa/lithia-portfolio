@@ -23,6 +23,8 @@ import {
   SiNestjs,
   SiPostman,
   SiCypress,
+  SiSelenium,
+  SiApachejmeter,
 } from "react-icons/si";
 
 const About = () => {
@@ -44,6 +46,8 @@ const About = () => {
     { name: "Postman", icon: <SiPostman className="text-orange-600" /> },
     { name: "Supabase", icon: <RiSupabaseFill className="text-green-600" /> },
     { name: "Cypress", icon: <SiCypress className="text-green-600" /> },
+    { name: "Selenium", icon: <SiSelenium className="text-green-500" /> },
+    { name: "JMeter", icon: <SiApachejmeter className="text-red-600" /> },
   ];
 
   return (

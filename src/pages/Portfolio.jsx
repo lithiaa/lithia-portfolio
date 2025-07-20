@@ -9,6 +9,10 @@ import {
   SiTailwindcss,
   SiBootstrap,
   SiDart,
+  SiNextdotjs,
+  SiNestjs,
+  SiPostgresql,
+  SiTypescript,
 } from "react-icons/si";
 import { TfiWorld } from "react-icons/tfi";
 
@@ -71,6 +75,34 @@ const projects = [
     image: "/age_play.png",
     links: [
       { label: "Client Source", url: "https://github.com/radeonaru/AgePlay", icon:<FaGithub className="text-gray-800" /> },
+    ],
+  },
+  {
+    title: "HRIS",
+    description: "HRIS (Human Resource Information System) is a comprehensive platform for managing human resources operations, including employee data management, attendance tracking, and HR workflow automation.",
+    techStack: [
+      { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
+      { name: "Next.js", icon: <SiNextdotjs className="text-black" /> },
+      { name: "Nest.js", icon: <SiNestjs className="text-red-600" /> },
+      { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600" /> },
+    ],
+    image: "/HRIS.png",
+    links: [
+      { label: "Client Source", url: "https://github.com/PBL-Dream-Team/HRIS", icon:<FaGithub className="text-gray-800" /> },
+    ],
+  },
+  {
+    title: "SewoApp",
+    description: "SewoApp is a mobile application designed for rental services, providing users with an easy and efficient platform to rent various items and services through a user-friendly mobile interface.",
+    techStack: [
+      { name: "Dart", icon: <SiDart className="text-blue-400" /> },
+      { name: "Flutter", icon: <SiFlutter className="text-blue-400" /> },
+      { name: "PHP", icon: <FaPhp className="text-purple-600" /> },
+      { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
+    ],
+    image: "/sewoapp.png",
+    links: [
+      { label: "Client Source", url: "https://github.com/lithiaa/sewoapp", icon:<FaGithub className="text-gray-800" /> },
     ],
   },
 ];
