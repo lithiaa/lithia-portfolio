@@ -18,7 +18,7 @@ const App = () => {
   return (
     <div className={"bg-black min-h-screen flex flex-col"}>
       <Header />
-      <main className="[&>section]:animate-fade-in-up">
+      <main>
         <section id="home">
           <Home />
         </section>

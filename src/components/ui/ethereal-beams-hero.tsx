@@ -531,28 +531,26 @@ export default function EtherealBeamsHero() {
       */}
 
       {/* Hero Content */}
-      <div className="relative z-10 flex min-h-[calc(100vh-4rem)] items-center">
+      <div className="relative z-10 flex min-h-[calc(100vh-4rem)] items-center pt-16 sm:pt-0">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
             {/* Badge */}
             <div className="mb-8 inline-flex items-center rounded-full bg-white/5 backdrop-blur-xl border border-white/10 px-4 py-2 text-sm text-white/90">
               <Star className="mr-2 h-4 w-4 text-white" />
-              Full-Stack Developer & Tech Enthusiast
+              Quality Assurance & Backend Developer
             </div>
 
             {/* Main Heading */}
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
-              Building Digital
+              Ensuring Quality,
               <br />
-              <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
-                Solutions
-              </span>{" "}
-              with Code
+              <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">Building Systems</span>{" "}
+              That Last
             </h1>
 
             {/* Subtitle */}
             <p className="mb-10 text-lg leading-8 text-white/80 sm:text-xl lg:text-2xl max-w-3xl mx-auto">
-              Passionate about crafting robust and user-friendly applications, from web platforms to mobile experiences.
+              Quality Assurance intern with a backend development focus. Passionate about building reliable systems and delivering bug-free experiences.
             </p>
 
             {/* CTA Buttons */}
@@ -574,15 +572,15 @@ export default function EtherealBeamsHero() {
             {/* Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">3+</div>
+                <div className="text-3xl font-bold text-white mb-2">4</div>
                 <div className="text-white/60 text-sm">Years of Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">10+</div>
+                <div className="text-3xl font-bold text-white mb-2">6+</div>
                 <div className="text-white/60 text-sm">Completed Projects</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">5+</div>
+                <div className="text-3xl font-bold text-white mb-2">16+</div>
                 <div className="text-white/60 text-sm">Tech Stacks</div>
               </div>
             </div>

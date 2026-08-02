@@ -1,4 +1,5 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 
 const certificates = [
@@ -17,9 +18,14 @@ const certificates = [
 ];
 
 const Certificates = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
-    <section id="certificates" className="py-20 bg-black text-white">
-      <div className="container mx-auto px-4">
+    <section id="certificates" ref={ref} className={`py-20 bg-black text-white transition-opacity duration-1000 ${inView ? 'opacity-100' : 'opacity-0'}`}>
+      <div className={`container mx-auto px-4 transform transition-transform duration-1000 ${inView ? 'translate-y-0' : 'translate-y-10'}`}>
         <h2 className="text-3xl font-bold text-center mb-12">Certificates</h2>
         <div className="max-w-4xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {certificates.map((cert, index) => (

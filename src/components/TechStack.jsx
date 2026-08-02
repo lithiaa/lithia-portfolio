@@ -1,4 +1,5 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
 import { BiLogoPostgresql } from "react-icons/bi";
 import {
   FaPhp,
@@ -50,9 +51,14 @@ const techStack = [
   ];
 
 const TechStack = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
-    <section id="tech-stack" className="py-20 bg-black text-white">
-      <div className="container mx-auto px-4">
+    <section id="tech-stack" ref={ref} className={`py-20 bg-black text-white transition-opacity duration-1000 ${inView ? 'opacity-100' : 'opacity-0'}`}>
+      <div className={`container mx-auto px-4 transform transition-transform duration-1000 ${inView ? 'translate-y-0' : 'translate-y-10'}`}>
         <h3 className="text-3xl text-center font-bold mb-12">
           Tech Stack
         </h3>
