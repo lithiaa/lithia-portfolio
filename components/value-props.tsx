@@ -1,4 +1,5 @@
 import { CheckCircle2, Layers3, TestTube2 } from "lucide-react";
+import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
 
 const values = [
@@ -27,11 +28,11 @@ export function ValueProps() {
         {values.map((value, index) => {
           const Icon = value.icon;
           return (
-            <article key={value.title} className={`py-8 md:px-8 ${index > 0 ? "border-t border-border md:border-l md:border-t-0" : "md:pl-0"}`}>
+            <Reveal as="article" key={value.title} delay={index * 0.08} y={16} className={`py-8 md:px-8 ${index > 0 ? "border-t border-border md:border-l md:border-t-0" : "md:pl-0"}`}>
               <Icon className="h-6 w-6 text-foreground" strokeWidth={1.6} aria-hidden="true" />
               <h3 className="mt-8 text-lg font-semibold tracking-[-0.03em]">{value.title}</h3>
               <p className="mt-3 max-w-sm text-sm leading-6 text-muted-foreground">{value.description}</p>
-            </article>
+            </Reveal>
           );
         })}
       </div>

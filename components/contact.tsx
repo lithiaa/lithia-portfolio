@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight, Download, Github, Linkedin, Mail } from "lucide-react";
+import { Reveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
 
 const socialLinks = [
@@ -13,12 +14,12 @@ export function Contact() {
     <section id="contact" className="relative overflow-hidden border-t border-border bg-[#f3eef5]">
       <div className="absolute -right-40 -top-52 h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(212,188,222,0.5),transparent_67%)] blur-2xl" />
       <div className="relative mx-auto flex max-w-7xl flex-col gap-12 px-6 py-24 lg:flex-row lg:items-end lg:justify-between lg:px-8 lg:py-32">
-        <div className="max-w-2xl">
+        <Reveal className="max-w-2xl">
           <p className="mb-4 font-mono text-xs uppercase tracking-[0.22em] text-muted-foreground">Open to conversations</p>
           <h2 className="text-4xl font-semibold tracking-[-0.06em] sm:text-6xl">Get in touch.</h2>
           <p className="mt-6 max-w-lg text-base leading-7 text-muted-foreground">Feel free to connect with me through social media or download my CV below.</p>
-        </div>
-        <div className="flex flex-col items-start gap-7 lg:items-end">
+        </Reveal>
+        <Reveal delay={0.08} className="flex flex-col items-start gap-7 lg:items-end">
           <div className="flex flex-wrap gap-5">
             {socialLinks.map((link) => {
               const Icon = link.icon;
@@ -34,7 +35,7 @@ export function Contact() {
           <Button asChild size="lg">
             <a href="/CV_Eng_Muhammad Bagus Indrawan.pdf" download>Download CV <Download aria-hidden="true" /></a>
           </Button>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

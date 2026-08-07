@@ -1,3 +1,5 @@
+import { Reveal } from "@/components/reveal";
+
 const steps = [
   { number: "01", title: "Understand", description: "I clarify the requirements, users, constraints, and the risks worth solving first." },
   { number: "02", title: "Build", description: "I shape clean, maintainable systems with the right boundaries and a clear path to delivery." },
@@ -14,11 +16,11 @@ export function HowIWork() {
         </div>
         <div className="mt-14 grid border-y border-white/15 md:grid-cols-3">
           {steps.map((step, index) => (
-            <article key={step.number} className={`py-8 md:px-8 ${index > 0 ? "border-t border-white/15 md:border-l md:border-t-0" : "md:pl-0"}`}>
+            <Reveal as="article" key={step.number} delay={index * 0.08} x={index === 0 ? -16 : index === 2 ? 16 : undefined} y={index === 1 ? 20 : 0} className={`py-8 md:px-8 ${index > 0 ? "border-t border-white/15 md:border-l md:border-t-0" : "md:pl-0"}`}>
               <span className="font-mono text-sm text-white/40">{step.number}</span>
               <h3 className="mt-10 text-2xl font-semibold tracking-[-0.04em]">{step.title}</h3>
               <p className="mt-4 max-w-xs text-sm leading-6 text-white/60">{step.description}</p>
-            </article>
+            </Reveal>
           ))}
         </div>
       </div>

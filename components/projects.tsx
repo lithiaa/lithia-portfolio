@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import { HoverLift, Reveal } from "@/components/reveal";
 import { projects } from "@/lib/content";
 import { SectionHeading } from "@/components/section-heading";
 
@@ -9,7 +10,8 @@ export function Projects() {
       <SectionHeading eyebrow="Selected work" title="Projects built around useful outcomes." description="A selection of web and mobile projects spanning community platforms, internal systems, and applied machine learning." />
       <div className="mt-14 grid gap-6 lg:grid-cols-2">
         {projects.map((project, index) => (
-          <article key={project.id} className="group overflow-hidden rounded-sm border border-border bg-white transition-all duration-300 hover:-translate-y-1 hover:border-foreground/30 hover:shadow-[0_18px_45px_rgba(23,23,23,0.08)]">
+          <Reveal key={project.id} delay={index * 0.1} y={16}>
+            <HoverLift className="group overflow-hidden rounded-sm border border-border bg-white transition-colors hover:border-foreground/30">
             <div className="relative aspect-[1.9/1] overflow-hidden border-b border-border bg-muted">
               <Image src={project.image} alt={`${project.title} thumbnail`} fill className="object-cover transition-transform duration-500 group-hover:scale-[1.03]" sizes="(max-width: 1024px) 100vw, 50vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -46,7 +48,8 @@ export function Projects() {
                 })}
               </div>
             </div>
-          </article>
+            </HoverLift>
+          </Reveal>
         ))}
       </div>
     </section>

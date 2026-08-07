@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { ArrowDownRight, ArrowUpRight, Check, CircleDot, GitPullRequest, MoreHorizontal, ShieldCheck } from "lucide-react";
+import { Reveal, ScaleReveal } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
 
 function IssueTrackerMockup() {
   return (
-    <div className="relative mx-auto w-full max-w-[620px] animate-float-slow">
+    <div className="relative mx-auto w-full max-w-[620px]">
       <div className="absolute -inset-8 rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(233,199,232,0.32),transparent_68%)] blur-2xl" />
       <div className="relative overflow-hidden rounded-sm border border-[#252525]/15 bg-white shadow-[0_24px_70px_rgba(29,22,38,0.14)]">
         <div className="flex h-11 items-center gap-2 border-b border-border bg-[#fbfbfc] px-4">
@@ -84,24 +85,35 @@ export function Hero() {
             <span className="h-1.5 w-1.5 rounded-full bg-[#5b9c72]" /> Available for opportunities
           </p>
           <h1 className="max-w-xl text-5xl font-semibold leading-[1.04] tracking-[-0.065em] text-foreground sm:text-6xl lg:text-[4.5rem]">
-            Ship software that never <em className="font-serif font-normal tracking-[-0.08em]">breaks.</em>
+            <Reveal as="span" className="block" y={18}>
+              Ship software that never
+            </Reveal>
+            <Reveal as="span" className="block" delay={0.05} y={18}>
+              <em className="font-serif font-normal tracking-[-0.08em]">breaks.</em>
+            </Reveal>
           </h1>
-          <p className="mt-7 max-w-lg text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
-            I&apos;m Muhammad Bagus Indrawan, backend enthusiast with a strong quality assurance mindset. I build efficient, scalable systems and ensure software quality through rigorous testing.
-          </p>
-          <div className="mt-9 flex flex-wrap items-center gap-3">
-            <Button asChild size="lg">
-              <Link href="#projects">View projects <ArrowDownRight aria-hidden="true" /></Link>
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link href="#contact">Contact me <ArrowUpRight aria-hidden="true" /></Link>
-            </Button>
-          </div>
+          <Reveal y={16} delay={0.12}>
+            <p className="mt-7 max-w-lg text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
+              I&apos;m Muhammad Bagus Indrawan, backend enthusiast with a strong quality assurance mindset. I build efficient, scalable systems and ensure software quality through rigorous testing.
+            </p>
+          </Reveal>
+          <Reveal y={14} delay={0.18}>
+            <div className="mt-9 flex flex-wrap items-center gap-3">
+              <Button asChild size="lg">
+                <Link href="#projects">View projects <ArrowDownRight aria-hidden="true" /></Link>
+              </Button>
+              <Button asChild size="lg" variant="outline">
+                <Link href="#contact">Contact me <ArrowUpRight aria-hidden="true" /></Link>
+              </Button>
+            </div>
+          </Reveal>
           <div className="mt-12 flex items-center gap-4 border-t border-border pt-5 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
             <span>Backend</span><span className="h-1 w-1 rounded-full bg-border" /><span>Quality assurance</span><span className="h-1 w-1 rounded-full bg-border" /><span>Systems</span>
           </div>
         </div>
-        <IssueTrackerMockup />
+        <ScaleReveal delay={0.18}>
+          <IssueTrackerMockup />
+        </ScaleReveal>
       </div>
     </section>
   );

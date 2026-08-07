@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { BriefcaseBusiness, GraduationCap } from "lucide-react";
+import { Reveal } from "@/components/reveal";
 import { education, experience } from "@/lib/content";
 import { SectionHeading } from "@/components/section-heading";
 
@@ -8,7 +9,7 @@ export function Credentials() {
     <section id="experience" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
       <SectionHeading eyebrow="Background" title="Where I’ve been learning and contributing." />
       <div className="mt-14 grid gap-4 lg:grid-cols-2">
-        <article className="rounded-sm border border-border bg-white p-6 sm:p-8">
+        <Reveal as="article" className="rounded-sm border border-border bg-white p-6 sm:p-8">
           <div className="flex items-center justify-between gap-4">
             <span className="flex h-10 w-10 items-center justify-center rounded-sm bg-muted"><GraduationCap className="h-5 w-5" aria-hidden="true" /></span>
             <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">Education</span>
@@ -23,8 +24,8 @@ export function Credentials() {
               <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.12em] text-muted-foreground">{education.duration}</p>
             </div>
           </div>
-        </article>
-        <article className="rounded-sm border border-border bg-white p-6 sm:p-8">
+        </Reveal>
+        <Reveal as="article" delay={0.08} className="rounded-sm border border-border bg-white p-6 sm:p-8">
           <div className="flex items-center justify-between gap-4">
             <span className="flex h-10 w-10 items-center justify-center rounded-sm bg-muted"><BriefcaseBusiness className="h-5 w-5" aria-hidden="true" /></span>
             <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">Experience</span>
@@ -40,7 +41,7 @@ export function Credentials() {
               <p className="mt-5 text-sm leading-6 text-muted-foreground">{experience.description}</p>
             </div>
           </div>
-        </article>
+        </Reveal>
       </div>
     </section>
   );
