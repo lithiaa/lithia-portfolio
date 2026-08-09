@@ -1,9 +1,12 @@
 import type { IconType } from "react-icons";
 
+export type PortfolioCategory = "backend" | "qa";
+
 export interface TechItem {
   name: string;
   icon: IconType;
   color: string;
+  category: PortfolioCategory;
 }
 
 export interface ProjectTech {
@@ -25,6 +28,7 @@ export interface Project {
   image: string;
   techStack: ProjectTech[];
   links: ProjectLink[];
+  category: PortfolioCategory;
 }
 
 export interface EducationEntry {
