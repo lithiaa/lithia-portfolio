@@ -34,7 +34,7 @@ function contrastText(hex: string) {
   const blue = Number.parseInt(value.slice(4, 6), 16);
   const luminance = (0.299 * red + 0.587 * green + 0.114 * blue) / 255;
 
-  return luminance > 0.62 ? "#111111" : "#ffffff";
+  return luminance > 0.5 ? "#111111" : "#ffffff";
 }
 
 function tokenStyle(design: DesignPreview, role: string, fallback: string): CSSProperties {
@@ -127,7 +127,7 @@ export function DesignPreviewPage({ design }: DesignPreviewProps) {
         </header>
 
         <section aria-labelledby="palette-heading" className="border-t py-12 sm:py-16" style={{ borderColor: hairline }}>
-          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+          <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
             <div>
               <p className="mb-2 font-mono text-xs uppercase tracking-[0.18em] opacity-55" style={{ fontFamily: monoFont }}>01 / color</p>
               <h2 id="palette-heading" className="text-2xl font-semibold tracking-[-0.04em] sm:text-3xl" style={{ fontFamily: displayFont }}>Color palette</h2>
@@ -140,9 +140,9 @@ export function DesignPreviewPage({ design }: DesignPreviewProps) {
                 <div className="flex min-h-24 items-end p-3 text-xs font-medium" style={{ backgroundColor: item.hex, color: contrastText(item.hex) }}>
                   {item.hex}
                 </div>
-                <div className="bg-transparent px-3 py-3">
-                  <p className="truncate text-xs font-semibold">{item.key}</p>
-                  <p className="mt-1 truncate text-[11px] opacity-55">{item.hex}</p>
+                <div className="min-w-0 bg-transparent px-3 py-3">
+                  <p className="break-words text-xs font-semibold">{item.key}</p>
+                  <p className="mt-1 break-words text-[11px] opacity-55">{item.hex}</p>
                 </div>
               </div>
             ))}
