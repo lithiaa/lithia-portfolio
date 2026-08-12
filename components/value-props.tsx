@@ -23,7 +23,7 @@ const values = [
 export function ValueProps() {
   return (
     <section id="about" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-      <SectionHeading eyebrow="What I bring" title="Engineering with a quality loop built in." description="I combine backend fundamentals with a QA perspective, so systems are built to work and verified to keep working." />
+      <SectionHeading eyebrow="What I bring" title="Engineering with a quality loop built in." description="I combine backend fundamentals with a QA perspective while exploring AI Automation for more efficient workflows." />
       <div className="mt-14 grid border-y border-border md:grid-cols-3">
         {values.map((value, index) => {
           const Icon = value.icon;

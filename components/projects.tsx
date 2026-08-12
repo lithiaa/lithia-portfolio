@@ -5,19 +5,21 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { HoverLift, Reveal } from "@/components/reveal";
 import { projects } from "@/lib/content";
+import type { PortfolioCategory } from "@/lib/types";
 import { SectionHeading } from "@/components/section-heading";
 
-type ProjectFilter = "all" | "backend" | "qa";
+type ProjectFilter = "all" | PortfolioCategory;
 
 const projectFilterOptions: Array<{ value: ProjectFilter; label: string }> = [
   { value: "all", label: "Semua" },
   { value: "backend", label: "Backend Developer" },
   { value: "qa", label: "Quality Assurance" },
+  { value: "ai-automation", label: "AI Automation" },
 ];
 
 export function Projects() {
   const [filter, setFilter] = useState<ProjectFilter>("all");
-  const visibleProjects = filter === "all" ? projects : projects.filter((project) => project.category === filter);
+  const visibleProjects = filter === "all" ? projects : projects.filter((project) => project.categories.includes(filter));
 
   return (
     <section id="projects" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
@@ -89,7 +91,7 @@ export function Projects() {
           ))
         ) : (
           <div className="border border-dashed border-border bg-white/70 p-8 text-center lg:col-span-2">
-            <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">Belum ada project QA</p>
+            <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">Belum ada project {projectFilterOptions.find((option) => option.value === filter)?.label}</p>
           </div>
         )}
       </div>

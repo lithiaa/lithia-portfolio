@@ -6,7 +6,7 @@ import {
   FaPython,
   FaReact,
 } from "react-icons/fa";
-import { RiSupabaseFill } from "react-icons/ri";
+import { RiRobot2Line, RiSupabaseFill } from "react-icons/ri";
 import {
   SiApachejmeter,
   SiBootstrap,
@@ -15,8 +15,10 @@ import {
   SiDjango,
   SiFlutter,
   SiJavascript,
+  SiLangchain,
   SiLaravel,
   SiMysql,
+  SiN8N,
   SiNextdotjs,
   SiNestjs,
   SiPostman,
@@ -35,25 +37,28 @@ import type {
 } from "./types";
 
 export const techStack: TechItem[] = [
-  { name: "PHP", icon: FaPhp, color: "text-[#777bb4]", category: "backend" },
-  { name: "JavaScript", icon: SiJavascript, color: "text-[#d6b600]", category: "backend" },
-  { name: "TypeScript", icon: SiTypescript, color: "text-[#3178c6]", category: "backend" },
-  { name: "Python", icon: FaPython, color: "text-[#3776ab]", category: "backend" },
-  { name: "Laravel", icon: SiLaravel, color: "text-[#ff2d20]", category: "backend" },
-  { name: "Next.js", icon: SiNextdotjs, color: "text-[#171717]", category: "backend" },
-  { name: "React", icon: FaReact, color: "text-[#149eca]", category: "backend" },
-  { name: "Django", icon: SiDjango, color: "text-[#092e20]", category: "backend" },
-  { name: "MySQL", icon: SiMysql, color: "text-[#4479a1]", category: "backend" },
-  { name: "PostgreSQL", icon: BiLogoPostgresql, color: "text-[#4169e1]", category: "backend" },
-  { name: "Docker", icon: FaDocker, color: "text-[#2496ed]", category: "backend" },
-  { name: "Supabase", icon: RiSupabaseFill, color: "text-[#3ecf8e]", category: "backend" },
-  { name: "Nest.js", icon: SiNestjs, color: "text-[#e0234e]", category: "backend" },
-  { name: "Flutter", icon: SiFlutter, color: "text-[#02569b]", category: "backend" },
-  { name: "Dart", icon: SiDart, color: "text-[#0175c2]", category: "backend" },
-  { name: "Postman", icon: SiPostman, color: "text-[#ff6c37]", category: "qa" },
-  { name: "Cypress", icon: SiCypress, color: "text-[#17202c]", category: "qa" },
-  { name: "Selenium", icon: SiSelenium, color: "text-[#43b02a]", category: "qa" },
-  { name: "JMeter", icon: SiApachejmeter, color: "text-[#d22128]", category: "qa" },
+  { name: "PHP", icon: FaPhp, color: "text-[#777bb4]", categories: ["backend"] },
+  { name: "JavaScript", icon: SiJavascript, color: "text-[#d6b600]", categories: ["backend"] },
+  { name: "TypeScript", icon: SiTypescript, color: "text-[#3178c6]", categories: ["backend"] },
+  { name: "Python", icon: FaPython, color: "text-[#3776ab]", categories: ["backend", "ai-automation"] },
+  { name: "Laravel", icon: SiLaravel, color: "text-[#ff2d20]", categories: ["backend"] },
+  { name: "Next.js", icon: SiNextdotjs, color: "text-[#171717]", categories: ["backend"] },
+  { name: "React", icon: FaReact, color: "text-[#149eca]", categories: ["backend"] },
+  { name: "Django", icon: SiDjango, color: "text-[#092e20]", categories: ["backend"] },
+  { name: "MySQL", icon: SiMysql, color: "text-[#4479a1]", categories: ["backend"] },
+  { name: "PostgreSQL", icon: BiLogoPostgresql, color: "text-[#4169e1]", categories: ["backend"] },
+  { name: "Docker", icon: FaDocker, color: "text-[#2496ed]", categories: ["backend", "ai-automation"] },
+  { name: "n8n", icon: SiN8N, color: "text-[#ea4b71]", categories: ["ai-automation"] },
+  { name: "LangChain", icon: SiLangchain, color: "text-[#1c3c3c]", categories: ["ai-automation"] },
+  { name: "AI Agents", icon: RiRobot2Line, color: "text-[#7c3aed]", categories: ["ai-automation"] },
+  { name: "Supabase", icon: RiSupabaseFill, color: "text-[#3ecf8e]", categories: ["backend"] },
+  { name: "Nest.js", icon: SiNestjs, color: "text-[#e0234e]", categories: ["backend"] },
+  { name: "Flutter", icon: SiFlutter, color: "text-[#02569b]", categories: ["backend"] },
+  { name: "Dart", icon: SiDart, color: "text-[#0175c2]", categories: ["backend"] },
+  { name: "Postman", icon: SiPostman, color: "text-[#ff6c37]", categories: ["qa"] },
+  { name: "Cypress", icon: SiCypress, color: "text-[#17202c]", categories: ["qa"] },
+  { name: "Selenium", icon: SiSelenium, color: "text-[#43b02a]", categories: ["qa"] },
+  { name: "JMeter", icon: SiApachejmeter, color: "text-[#d22128]", categories: ["qa"] },
 ];
 
 const projectTech = {
@@ -85,7 +90,7 @@ export const projects: Project[] = [
       { label: "Visit Website", url: "https://www.polinemaesports.id", icon: TfiWorld },
       { label: "Client Source", url: "https://github.com/radeonaru/polinemaesports", icon: FaGithub },
     ],
-    category: "backend",
+    categories: ["backend"],
   },
   {
     id: "sirw",
@@ -95,7 +100,7 @@ export const projects: Project[] = [
     techStack: [projectTech.php, projectTech.laravel, projectTech.bootstrap, projectTech.javascript, projectTech.mysql],
     image: "/SIRW.png",
     links: [{ label: "Client Source", url: "https://github.com/radeonaru/SI2X", icon: FaGithub }],
-    category: "backend",
+    categories: ["backend"],
   },
   {
     id: "tertib-app",
@@ -105,7 +110,7 @@ export const projects: Project[] = [
     techStack: [projectTech.php, projectTech.bootstrap, projectTech.javascript, projectTech.mysql],
     image: "/TertibApp.png",
     links: [{ label: "Client Source", url: "https://github.com/radeonaru/TertibApp", icon: FaGithub }],
-    category: "backend",
+    categories: ["backend"],
   },
   {
     id: "age-play",
@@ -115,7 +120,7 @@ export const projects: Project[] = [
     techStack: [projectTech.python, projectTech.dart, projectTech.mysql, projectTech.flutter, projectTech.django],
     image: "/age_play.png",
     links: [{ label: "Client Source", url: "https://github.com/radeonaru/AgePlay", icon: FaGithub }],
-    category: "backend",
+    categories: ["backend"],
   },
   {
     id: "hris",
@@ -125,7 +130,7 @@ export const projects: Project[] = [
     techStack: [projectTech.typescript, projectTech.next, projectTech.nest, projectTech.postgres],
     image: "/HRIS.png",
     links: [{ label: "Client Source", url: "https://github.com/PBL-Dream-Team/HRIS", icon: FaGithub }],
-    category: "backend",
+    categories: ["backend"],
   },
   {
     id: "sewo-app",
@@ -135,7 +140,7 @@ export const projects: Project[] = [
     techStack: [projectTech.dart, projectTech.flutter, projectTech.php, projectTech.mysql],
     image: "/sewoapp.png",
     links: [{ label: "Client Source", url: "https://github.com/lithiaa/sewoapp", icon: FaGithub }],
-    category: "backend",
+    categories: ["backend"],
   },
 ];
 

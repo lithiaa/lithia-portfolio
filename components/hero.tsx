@@ -94,7 +94,7 @@ export function Hero() {
           </h1>
           <Reveal y={16} delay={0.12}>
             <p className="mt-7 max-w-lg text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
-              I&apos;m Muhammad Bagus Indrawan, backend enthusiast with a strong quality assurance mindset. I build efficient, scalable systems and ensure software quality through rigorous testing.
+              I&apos;m Muhammad Bagus Indrawan, backend enthusiast with a strong quality assurance mindset. I build efficient, scalable systems and ensure software quality through rigorous testing. I&apos;m also currently exploring AI Automation to build more efficient workflows and intelligent agents.
             </p>
           </Reveal>
           <Reveal y={14} delay={0.18}>
@@ -108,7 +108,7 @@ export function Hero() {
             </div>
           </Reveal>
           <div className="mt-12 flex items-center gap-4 border-t border-border pt-5 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
-            <span>Backend</span><span className="h-1 w-1 rounded-full bg-border" /><span>Quality assurance</span><span className="h-1 w-1 rounded-full bg-border" /><span>Systems</span>
+            <span>Backend</span><span className="h-1 w-1 rounded-full bg-border" /><span>Quality assurance</span><span className="h-1 w-1 rounded-full bg-border" /><span>AI Automation</span><span className="h-1 w-1 rounded-full bg-border" /><span>Systems</span>
           </div>
         </div>
         <ScaleReveal delay={0.18}>

@@ -2,25 +2,27 @@
 
 import { useState } from "react";
 import { techStack } from "@/lib/content";
+import type { PortfolioCategory } from "@/lib/types";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
 
-type TechView = "backend" | "qa";
+type TechView = PortfolioCategory;
 
 const techViewOptions: Array<{ value: TechView; label: string }> = [
   { value: "backend", label: "Backend Developer" },
   { value: "qa", label: "Quality Assurance" },
+  { value: "ai-automation", label: "AI Automation" },
 ];
 
 export function TechStack() {
   const [view, setView] = useState<TechView>("backend");
-  const visibleTech = techStack.filter((tech) => tech.category === view);
+  const visibleTech = techStack.filter((tech) => tech.categories.includes(view));
 
   return (
     <section id="stack" className="border-y border-border bg-white/70">
       <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <SectionHeading eyebrow="Tools I use" title="A practical stack for shipping and checking." description="A flexible toolkit across application development, data, delivery, and quality assurance." />
-        <div className="mt-8 inline-flex rounded-sm border border-border bg-[#fafafa] p-1" aria-label="Filter technologies">
+        <div className="mt-8 inline-flex max-w-full flex-wrap rounded-sm border border-border bg-[#fafafa] p-1" aria-label="Filter technologies">
           {techViewOptions.map((option) => {
             const isActive = view === option.value;
 
